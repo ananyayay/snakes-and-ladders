@@ -1,25 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Controller">
-   <children>
-      <ImageView fx:id="img" fitHeight="400.0" fitWidth="400.0" onMouseClicked="#findloc" opacity="0.86" pickOnBounds="true" preserveRatio="true">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="895.0" prefWidth="509.0" scaleX="0.75" scaleY="0.75" translateX="-60.0" translateY="-90.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+      <ImageView fx:id="diceImage1" fitHeight="705.0" fitWidth="528.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@bg.jpg" />
+            <Image url="@images/20211221_161821.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="locvar" layoutX="448.0" layoutY="196.0" text="Label" />
-      <Circle fx:id="p1" fill="DODGERBLUE" layoutX="20.0" layoutY="380.0" opacity="0.31" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="dice_result" layoutX="188.0" layoutY="444.0" text="Dice" />
-      <Button fx:id="player2" layoutX="348.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#p2click" text="Player2" />
-      <Button fx:id="player1" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#p1click" text="Player1" />
-      <Button fx:id="start" layoutX="412.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#gamebutton" prefHeight="25.0" prefWidth="73.0" text="Start" />
-      <Circle fx:id="p2" fill="#e7ff1f" layoutX="20.0" layoutY="380.0" opacity="0.31" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
-   </children>
+
+        <ImageView fx:id="img" fitHeight="400.0" fitWidth="400.0" onMouseClicked="#findloc" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/bg.jpg" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="diceImage2" fitHeight="200.0" fitWidth="360.0" layoutX="86.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/20211222_004906.jpg" />
+         </image>
+      </ImageView>
+
+                          <ImageView fx:id="img2" fitHeight="110.0" fitWidth="399.0" layoutX="1.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/cropmaxresdefault.jpg" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="diceImage11" fitHeight="704.0" fitWidth="545.0" layoutX="-5.0" layoutY="665.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/20211221_161821.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D width="100.0" />
+         </viewport>
+      </ImageView>
+        <Button fx:id="player2" disable="true" layoutX="298.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#p2click" opacity="0.05" prefHeight="40.0" prefWidth="40.0" />
+        <Button fx:id="player1" disable="true" layoutX="64.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#p1click" opacity="0.05" prefHeight="40.0" prefWidth="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="82.0" layoutY="787.0" stroke="BLACK" strokeType="INSIDE" width="345.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.7223974770928031" startY="0.6813880126182965">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.44736841320991516" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007633587786259542">
+                     <color>
+                        <Color red="0.44736841320991516" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5190839694656487">
+                     <color>
+                        <Color red="0.02631578966975212" green="0.0023554256185889244" blue="0.0023554256185889244" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3684210479259491" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+        <Circle fx:id="p2" layoutX="21.0" layoutY="380.0" radius="20.0" stroke="#e9dc25" strokeType="INSIDE" visible="false">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.629770977806499">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.09669211195928754">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.2875318066157762">
+                     <color>
+                        <Color red="1.0" green="0.9612654447555542" blue="0.2253086417913437" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.49050158597371796">
+                     <color>
+                        <Color red="1.0" green="0.949999988079071" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.706019728815922">
+                     <color>
+                        <Color red="0.9300000071525574" green="0.8258652091026306" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.728990205305169">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7430025445292621">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7582697201017793">
+                     <color>
+                        <Color red="0.9385964870452881" green="0.8620699644088745" blue="0.020278319716453552" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7760814249363863">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill></Circle>
+        <Circle fx:id="p1" layoutX="21.0" layoutY="380.0" radius="20.0" stroke="#2fa7fd" strokeType="INSIDE" visible="false">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.629770977806499">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.14629300428735753">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5012722646310432">
+                     <color>
+                        <Color red="0.36000001430511475" green="0.8523213863372803" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6844783715012721">
+                     <color>
+                        <Color red="0.00804093573242426" green="0.45257067680358887" blue="0.8684210777282715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7302798982188294">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill></Circle>
+
+        <Label fx:id="locvar" layoutX="203.0" layoutY="777.0" prefHeight="96.0" prefWidth="207.0" text="Click on the board to find the coordinates" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+        <Label fx:id="dice_result" layoutX="170.0" layoutY="501.0" text="Dice" visible="false" />
+        <Button fx:id="start" layoutX="87.0" layoutY="684.0" mnemonicParsing="false" onMouseClicked="#gamebutton" prefHeight="69.0" prefWidth="345.0" text="START">
+         <font>
+            <Font size="27.0" />
+         </font></Button>
+      <ImageView fx:id="diceImage" fitHeight="65.0" fitWidth="65.0" layoutX="170.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dice/dice1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="rollButton" disable="true" layoutX="170.0" layoutY="424.0" mnemonicParsing="false" onAction="#roll" opacity="0.0" prefHeight="64.0" prefWidth="65.0" text="Roll" />
+      <Circle fx:id="p11" layoutX="94.0" layoutY="465.0" opacity="0.31" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.629770977806499">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.3206106870229008">
+                     <color>
+                        <Color red="0.36000001430511475" green="0.8523213863372803" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7251908396946559">
+                     <color>
+                        <Color red="0.007843137718737125" green="0.45098039507865906" blue="0.8666666746139526" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7531806615776079">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7775454006762172">
+                     <color>
+                        <Color red="0.007843137718737125" green="0.45098039507865906" blue="0.8666666746139526" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7913486005089055">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Circle>
+      <Circle fx:id="p111" layoutX="104.0" layoutY="475.0" opacity="0.31" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.49684540180001724" radius="0.629770977806499">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.16284987277353663">
+                     <color>
+                        <Color red="0.6296296119689941" green="0.9197530746459961" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.3155216284987277">
+                     <color>
+                        <Color red="0.3607843220233917" green="0.8509804010391235" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7251908396946559">
+                     <color>
+                        <Color red="0.007843137718737125" green="0.45098039507865906" blue="0.8666666746139526" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7531806615776079">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7775454006762172">
+                     <color>
+                        <Color red="0.007843137718737125" green="0.45098039507865906" blue="0.8666666746139526" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7837150127226463">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7913486005089055">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Circle>
+      <Text fill="WHITE" layoutX="105.0" layoutY="819.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Positions:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+    </children>
 </Pane>
